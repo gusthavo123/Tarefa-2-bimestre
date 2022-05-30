@@ -1,6 +1,6 @@
 Algoritmo "semnome"
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Moisés Gabriel de Caris, Gustavo Seiti Miyabe, Fernando Galdino Santana JR
+// DescriÃ§Ã£o   : Aqui vocÃª descreve o que o programa faz! (funÃ§Ã£o)
+// Autor(a)    : MoisÃ©s Gabriel de Caris, Gustavo Seiti Miyabe, Fernando Galdino Santana JR
 // Data atual  : 18/05/2022
 Var
    op : inteiro
@@ -19,7 +19,7 @@ procedimento lersom()
 var
    num1,num2 :inteiro
 inicio
-   escreval("O resultado da Soma dos numeros é:",f_som(num1,num2))
+   escreval("O resultado da Soma dos numeros Ã©:",f_som(num1,num2))
    escreval(" ")
 fimprocedimento
 funcao f_men (n1,n2 : inteiro):Inteiro
@@ -37,7 +37,7 @@ procedimento lermen()
 var
    num1,num2 :inteiro
 inicio
-   escreval("O resultado da subtração dos numeros é:",f_men(num1,num2))
+   escreval("O resultado da subtraÃ§Ã£o dos numeros Ã©:",f_men(num1,num2))
    escreval(" ")
 fimprocedimento
 funcao f_div (n1,n2 : real):real
@@ -55,7 +55,7 @@ procedimento lerdiv()
 var
    num1,num2 :real
 inicio
-   escreval("O resultado da divisão dos numeros é:",f_div(num1,num2))
+   escreval("O resultado da divisÃ£o dos numeros Ã©:",f_div(num1,num2))
    escreval(" ")
 fimprocedimento
 funcao f_mult (n1,n2 : inteiro):Inteiro
@@ -73,11 +73,11 @@ procedimento lermult()
 var
    num1,num2 :inteiro
 inicio
-   escreval("O resultado da multiplicação dos numeros é:",f_mult(num1,num2))
+   escreval("O resultado da multiplicaÃ§Ã£o dos numeros Ã©:",f_mult(num1,num2))
    escreval(" ")
 fimprocedimento
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc...
+   // SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
    enquanto (op <> 5) faca
       Escreval("1-Soma")
       escreval("2-Subtrair")
