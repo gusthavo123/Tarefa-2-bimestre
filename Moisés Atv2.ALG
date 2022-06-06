@@ -1,8 +1,8 @@
 Algoritmo "num_primo"
-// Disciplina   : [Linguagem e Lógica de Programação]
+// Disciplina   : [Linguagem e LÃ³gica de ProgramaÃ§Ã£o]
 // Professor   : Edson Shinki Nascimento
-// Descrição   : Verfica se o numero e primo
-// Autor(a)    : Fernando Galdino Santana Junior, Moises Gabriel de Caris e Gustavo Seiti Miybabe
+// DescriÃ§Ã£o   : Verfica se o numero e primo
+// Autor(a)    : Fernando Galdino Santana Junior, Moises Gabriel de Caris e Gustavo Seiti Miyabe
 // Data atual  : 6/6/2022
 Var
    num: vetor[0..9] de inteiro
@@ -73,6 +73,77 @@ inicio
    // esses dois fimpara servem para deixar os escreval mais bonitos
 fimprocedimento
 
+procedimento verificacaoPar
+var
+   i, qtdPar, ultimoPar : inteiro
+   par : vetor[0..9] de inteiro
+inicio
+   qtdPar <- 0
+   para i de 0 ate 9 faca
+      se (num[i] mod 2 = 0) entao
+         qtdPar <- qtdPar + 1
+         par[i] <- num[i]
+      fimse
+   fimpara
+
+   escreval("Total de numeros pares: ", qtdPar)
+   escreva("Os numeros pares foram: ")
+
+   ultimoPar <- 0
+   para i de 0 ate 9 faca
+      se (par[i] <> 0) entao
+         ultimoPar <- par[i]
+      fimse
+   fimpara
+
+   para i de 0 ate 9 faca
+      se (par[i] <> 0) e (par[i] <> ultimoPar) entao
+         escreva(par[i], " | ")
+      senao
+         se (par[i] <> 0) e (par[i] = ultimoPar) entao
+            escreval(par[i], ".")
+         fimse
+      fimse
+   fimpara
+
+fimprocedimento
+
+procedimento verificacaoImpar
+var
+   i, qtdImpar, ultimoImpar : inteiro
+   impar : vetor[0..9] de inteiro
+inicio
+   qtdImpar <- 0
+   para i de 0 ate 9 faca
+      se (num[i] mod 2 <> 0) entao
+         qtdImpar <- qtdImpar + 1
+         impar[i] <- num[i]
+      fimse
+   fimpara
+
+   escreval("Total de numeros pares: ", qtdImpar)
+   escreva("Os numeros impares foram: ")
+
+   ultimoImpar <- 0
+   para i de 0 ate 9 faca
+      se (numImpar[i] <> 0) entao
+         ultimoImpar <- impar[i]
+      fimse
+   fimpara
+
+   para i de 0 ate 9 faca
+      se (impar[i] <> 0) e (impar[i] <> ultimoP) entao
+         escreva(numP[i], " | ")
+      senao
+         se (impar[i] <> 0) e impar[i] = ultimoImpar) entao
+            escreval(impar[i], ".")
+         fimse
+      fimse
+   fimpara
+
+fimprocedimento
+
+
 Inicio
    enquanto op <> 9 faca
       escreval("Digite a opcao desejada")
@@ -94,13 +165,19 @@ Inicio
          limpatela
       caso(2)
          limpatela
+         escreval("Voce optou por identificar os numeros pares!")
+         verificacaoPar
+         escreval("====================================")
       caso(3)
          limpatela
+         escreval("Voce optou por identificar os numeros impares")
+         verificacaoImpar
+         escreval("====================================")
       caso(4)
          limpatela
          escreval("Voce optou por identificar os numeros primos")
          verificacaoPrimo
-         escreval("==================================")
+         escreval("====================================")
       caso(9)
          limpatela
          escreval("Voce optou por sair!")
